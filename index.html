@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+        ':35729/livereload.js?snipver=1"></' + 'script>')
+      </script> 
+</head>
+<body>
+    <header id="navbar" class="navbar">
+        <div class="navbar__logo">Company Name</div>
+        <nav>
+            <ul class="navbar__links">
+                <li><a href="#home"  class="navbar__link"> Home</a> 
+                <li><a href="#projects"  class="navbar__link"> Projects</a>
+                <li><a href="#about" class="navbar__link"> About </a>
+                <li><a href="#contact" class="navbar__link">  Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <main >
+        <section id="home">
+                <figure class="banner">
+                    <img class="banner__img" src="banner.jpg">
+                    <figcaption class="banner__text">
+                        <h1  class="banner__heading">Banner Heading</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu massa ac leo accumsan pulvinar. 
+                    </figcaption>
+                </figure>
+        </section>
+       
+                    <section class="infoblock">
+            <h1 class="infoblock__heading"> Info Heading</h1>
+                <section class="infoblock__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ante in nulla pharetra dapibus. Vivamus viverra ultrices lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consequat gravida nisi, ut tristique turpis sodales sit amet. Pellentesque auctor, massa vitae tincidunt mollis, diam odio tincidunt mi, sit amet rhoncus diam dolor quis ante. Nam vel tincidunt est.
+                </section>
+        </section> 
+        <div id="projects" class="icongroup__bg">
+            <section class="icongroup">
+                <figure class="roundicon">
+                        <img class="roundicon__img--border-black" src="icon.jpg">
+                        <figcaption class="roundicon__caption">Icon caption1</figcaption>
+                </figure>
+                <figure class="roundicon">
+                        <img class="roundicon__img" src="banner.jpg">
+                        <figcaption class="roundicon__caption">Icon caption2</figcaption>
+                </figure>
+                <figure class="roundicon">
+                        <img class="roundicon__img--border-black" src="icon.jpg">
+                        <figcaption class="roundicon__caption">Icon caption3</figcaption>
+                </figure>
+                <figure class="roundicon">
+                        <img class="roundicon__img" src="banner.jpg">
+                        <figcaption class="roundicon__caption">Icon caption4</figcaption>
+                </figure>
+                <figure class="roundicon">
+                        <img class="roundicon__img--border-black" src="icon.jpg">
+                        <figcaption class="roundicon__caption">Icon caption5</figcaption>
+                </figure>
+                <figure class="roundicon">
+                        <img class="roundicon__img" src="banner.jpg">
+                        <figcaption class="roundicon__caption">Icon caption6</figcaption>
+                </figure>
+            </section>
+        </div>
+        <section id="about" class="infoblock">
+                <h1 class="infoblock__heading"> Info Heading 2 </h1>
+                <section class="infoblock__text">        
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ante in nulla pharetra dapibus. Vivamus viverra ultrices lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consequat gravida nisi, ut tristique turpis sodales sit amet. Pellentesque auctor, massa vitae tincidunt mollis, diam odio tincidunt mi, sit amet rhoncus diam dolor quis ante. Nam vel tincidunt est. Nunc molestie augue ac lorem egestas mattis. Suspendisse fringilla consequat purus, sed mattis turpis volutpat vitae. Donec tincidunt, orci sollicitudin semper imperdiet, risus magna ultrices sem, eu luctus eros enim id ipsum. Fusce dictum facilisis dui nec ultricies. </div>
+                            <img class="infoblock__img" src="info.jpg">
+                </section>
+            </section>
+    </main>
+    <foooter class="footer" id="contact">
+        <div class="social">
+        Company profiles
+        <ul class="social__links">
+                <li class="social__link"><a class="social__linka" href="#">Facebook</a></li>
+                <li class="social__link"><a class="social__linka"  href="#">Twitter</a></li>
+                <li class="social__link"><a class="social__linka"  href="#">Instagram</a></li>
+                <li class="social__link"><a class="social__linka"  href="#">LinkedIn</a></li>    
+        </ul>
+        </div>
+        <div class="Subbox">
+            Subscribe to our newsletter
+                <form class="Subbox__form">
+                    <label class="Subbox__label">Email :</label>
+                    <input class="Subbox__input" type="email" ></input>
+                    <button class="Subbox__button" type="submit">Subscribe</button>
+                </form>
+        </div>
+        <div class="Copyright">
+             Copyright &copy; Company Name 2018
+        </div>
+    </foooter>
+
+    <script>
+    var shiftWindow = function(event) { 
+        var hash=location.hash;
+        var scroll=document.getElementById("navbar").clientHeight ;
+        console.log(hash)
+        if(hash == "#home" || hash =="#projects")
+        scrollBy(0, -scroll);
+        if(window.innerWidth < 850 && hash =="#about")
+        scrollBy(0, -scroll);
+
+        };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    </script>
+</body>
+</html>
